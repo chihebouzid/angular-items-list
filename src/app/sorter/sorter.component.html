@@ -1,0 +1,7 @@
+<div class="sort-container">
+  <button class="sort-btn" (click)="isOpen = !isOpen">Sort</button>
+  <div *ngIf="isOpen" class="sort-dropdown">
+    <button (click)="sort('asc')">Price Ascending</button>
+    <button (click)="sort('desc')">Price Descending</button>
+  </div>
+</div>

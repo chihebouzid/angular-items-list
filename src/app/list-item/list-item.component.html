@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">{{ data.index }}. {{ data.title }}</div>
+  <div class="card-body">
+    <img [src]="'assets/images/' + data.image" alt="Image" />
+    <p>Price: {{ data.price }}</p>
+    <p>Tags: {{ data.tags.join(", ") }}</p>
+    <p>Rating: {{ data.rating }}/5</p>
+    <button (click)="showDescription = !showDescription">
+      {{ showDescription ? "Hide" : "Show" }} Description
+    </button>
+    <p *ngIf="showDescription">{{ data.description }}</p>
+  </div>
+</div>

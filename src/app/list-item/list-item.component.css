@@ -1,0 +1,24 @@
+.card {
+  width: 400px;
+  margin: 16px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #000;
+  overflow: hidden;
+}
+.card-header {
+  background-color: #fd8a02;
+  padding: 16px;
+  font-weight: bold;
+  color: white;
+}
+.card-body {
+  padding: 16px;
+  background-color: white;
+}
+img {
+  width: 100%;
+}
+p {
+  margin: 8px 0;
+}
