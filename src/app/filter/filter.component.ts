@@ -12,13 +12,13 @@ import {
   styleUrls: ['./filter.component.css'],
 })
 export class FilterComponent {
-  @ViewChild('teams') teams!: ElementRef;
+  @ViewChild('filters') filters!: ElementRef;
   @Output() filter = new EventEmitter<string>();
 
-  selectedTeam = '';
+  selectedFilter = '';
 
   onSelected(): void {
-    this.selectedTeam = this.teams.nativeElement.value;
-    this.filter.emit(this.selectedTeam);
+    this.selectedFilter = this.filters.nativeElement.value;
+    this.filter.emit(this.selectedFilter);
   }
 }

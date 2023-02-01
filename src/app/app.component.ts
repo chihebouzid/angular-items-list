@@ -24,19 +24,14 @@ export class AppComponent {
   }
 
   onFilter(selectedOption: string) {
-    if (selectedOption === 'All') {
-      this.dataServiceService.getItems().subscribe((data) => {
-        this.items = data;
-      });
-    } else if (selectedOption === 'Edible') {
-      this.dataServiceService.getItems().subscribe((data) => {
-        this.items = data.filter((el: any) => el.isEdible);
-      });
-    } else if (selectedOption === 'Not Edible') {
-      this.dataServiceService.getItems().subscribe((data) => {
-        this.items = data.filter((el: any) => el.isEdible === false);
-      });
-    }
+    this.dataServiceService.getItems().subscribe((data) => {
+      this.items =
+        selectedOption === 'All'
+          ? data
+          : data.filter(
+              (el: any) => el.isEdible === (selectedOption === 'Edible')
+            );
+    });
   }
 
   dividePriceBy(priceDivider: number) {

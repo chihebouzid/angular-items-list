@@ -9,12 +9,7 @@ export class SorterComponent {
   @Input() items: any;
   @Output() sorted = new EventEmitter<any[]>();
 
-  showDropdown = false;
   isOpen = false;
-
-  toggleDropdown() {
-    this.showDropdown = !this.showDropdown;
-  }
 
   sort(order: string) {
     let sortedItems = [...this.items];
